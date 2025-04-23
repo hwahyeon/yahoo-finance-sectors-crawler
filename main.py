@@ -49,7 +49,7 @@ def fetch_data():
             print(f"No data found on the {sector} page.")
             continue
         
-         for box in boxes:
+        for box in boxes:
             ticker_div = box.find("div", class_="ticker-div")
             percent_div = box.find("div", class_="percent-div")
             if ticker_div and percent_div:
