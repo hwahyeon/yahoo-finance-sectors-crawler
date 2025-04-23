@@ -39,8 +39,8 @@ def fetch_data():
             return
 
         soup = BeautifulSoup(response.content, "html.parser")
-        heatmap_container = soup.find('div', class_='heatMap-container')
-        if not heatmap_container:
+        heatmap = soup.find('div', class_='heatMap-container')
+        if not heatmap:
             print(f"Could not find 'heatMap-container' on the {sector} page.")
             continue
 
